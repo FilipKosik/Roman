@@ -9,5 +9,5 @@ Let me know, if you are really interested in me and you need more. I will try to
 ## Launch
 * Open the project. 
 * Build the project using Maven (use default m2 settings.xml). 
-* Run the project (Tomcat is embedded, no need for deployment, just run it). 
-* Developed under Java 8 (using Adopt Open JDK)
+* Run the project (Tomcat is embedded, no need for deployment, just run it as Java Application). Use main method in RomanNumeralConverterApp.
+* Developed under Java 8 (using Adopt Open JDK 8 for both compilation and runtime).
