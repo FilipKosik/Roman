@@ -24,4 +24,5 @@ Demo includes unit tests using *JUniper* (*JUnit 5* as a default Spring Boot dep
 5. Application will run on localhost and port 8077. Change the port in `application.yml` if needed.
 
 Note: The web application requires the **Internet** because jQuery is not hosted but Google CDN is used. jQuery source should be added for production and/or offline deployment.
+
 Note 2: This is standalone application (with embedded Tomcat). If you want relaunch, restart the application to **stop its previous instance.** Otherwise, you will run multiple instances but you have to use a different ports for them.
