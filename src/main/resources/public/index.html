@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Roman numeral converter</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="page">
+		<h1>Roman numeral converter</h1>
+		<div><label>Enter a Roman numeral or whole positive decimal number for conversion:</label></div>
+		<div>
+			<input type="text" id="value" maxlength="20">
+			<p id="errMessage"></p>
+		</div>
+		<div><label>Result:</label></div>
+		<div><input type="text" id="result" readonly></div>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+	const valueInput = $('#value');
+	const resultInput = $('#result');
+	const errMessage = $('#errMessage');
+	
+	valueInput.on('input', function(e) {
+		errMessage.text("");
+		resultInput.val("");
+		if (valueInput.val().length > 0){
+			$.ajax({ 
+				type: "GET",
+				dataType: "text",
+				url: "./roman/" + valueInput.val(),
+				success: function(result){
+					resultInput.val(result);
+				},
+				error: function(xhr, ajaxOptions, thrownError){
+					const err = !xhr.responseText ? "Server is down!" : xhr.responseText;
+					errMessage.text(err);
+				}
+			});
+		}
+	});
+	
+</script>
+</html>

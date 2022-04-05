@@ -1,0 +1,25 @@
+/*** START center content in IE ***/
+body{
+ 	text-align: center; 
+}
+#page{
+	text-align: left;
+}
+/*** END center content in IE ***/
+
+#page{
+	width: 50em;
+	margin: 1em auto;
+}
+input {
+	width: 100%;
+	padding: 12px 20px;
+  	margin: 0.2em 0 0.5em 0;
+  	box-sizing: border-box;
+}
+#errMessage {
+	width: 100%;
+	margin: 0.2em 0 0.5em 0;
+	color: #A00;
+	font-weight: bold;
+}

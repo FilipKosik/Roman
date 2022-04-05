@@ -2,8 +2,11 @@ package filip.kosik.demo.RomanNumeral.service;
 
 import java.util.regex.Pattern;
 
+import org.springframework.stereotype.Service;
+
 import com.google.common.collect.ImmutableBiMap;
 
+@Service
 //Note: This may be static "utility" class with static methods but the given interface was not static.
 public class MyRomanNumeralConverterImpl implements MyRomanNumeralConverter {
 
