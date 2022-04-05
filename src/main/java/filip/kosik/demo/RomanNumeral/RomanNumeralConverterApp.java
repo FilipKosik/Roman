@@ -1,13 +1,13 @@
-package filip.kosik.demo.RomanNumeralConverter;
+package filip.kosik.demo.RomanNumeral;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RomanNumeralConverterApplication {
+public class RomanNumeralConverterApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RomanNumeralConverterApplication.class, args);
+		SpringApplication.run(RomanNumeralConverterApp.class, args);
 	}
 
 }
