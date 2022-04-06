@@ -1,16 +1,14 @@
 # Roman
-Demo of conversion to and from Roman numerals as a simple web app
+Interview demo of conversion to and from Roman numerals. Created as a simple web app.
 
 
 ## Implementation Notes
 Unfortunately, I am really busy and I cannot "play” with a super nice solution. I used Spring Boot with an embedded *Tomcat* (in *Spring Boot Web*). 
 *Guava* is used because of `ImmutableBiMap` (immutable bidirectional map with unique values and keys + providing method `invert`).
 
-There is no client framework/library (e.g. *JSF*) for front-end. It is a plain *HTML*, *CSS* and *jQuery* that directly calls REST API running on the *Tomcat*. It seems to me as a waste of my time and expensive work for such a simple task.
+There is no advanced client framework/library (e.g. *JSF*, *React*) for front-end. It is a plain *HTML*, *CSS* and *jQuery* that directly calls REST API running on the *Tomcat*. It seems to me as a waste of my time and expensive work for such a simple task.
 
-
-Let me know, if you are really interested in me and you need more. I will try to implement something more sophisticated but I cannot guarantee when I have enough time for that. 
-
+There could be additional refactoring/implementation changes in case of more complex or production application, e.g. use of custom exceptions. Interfaces `MyRomanNumeralConverter` and `RomanNumeralConverter` can be merged if both are internal but I worked with it as a third-party interface (because `RomanNumeralConverter` was a part of task assignment).
 
 ## Tests 
 Demo includes unit tests using *JUniper* (*JUnit 5* as a default Spring Boot dependency). Dependency is available in project (through *Maven*). 
