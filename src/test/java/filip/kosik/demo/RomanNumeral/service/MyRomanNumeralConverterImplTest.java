@@ -112,10 +112,15 @@ public class MyRomanNumeralConverterImplTest {
 	}
 
 	@Test
-	public void testFromRomanNumeralTooMany() {
+	public void testFromRomanNumeralTooManyX() {
 		assertThrows(IllegalArgumentException.class, () -> testedConverter.fromRomanNumeral("XXXX"));
 	}
 
+	@Test
+	public void testFromRomanNumeralTooManyM() {
+		assertThrows(IllegalArgumentException.class, () -> testedConverter.fromRomanNumeral("MMMM"));
+	}
+	
 	@Test
 	public void testFromRomanNumeralWrongOrderTenThousand() {
 		assertThrows(IllegalArgumentException.class, () -> testedConverter.fromRomanNumeral("XM"));

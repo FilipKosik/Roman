@@ -24,7 +24,7 @@ public class MyRomanNumeralConverterImpl implements MyRomanNumeralConverter {
 	
 	private final static Pattern basicRomanPattern = Pattern.compile("^[MDCLXVI]+$", Pattern.CASE_INSENSITIVE);
 	private final static Pattern basicDecimalPattern = Pattern.compile("^-?[0-9]{1,9}$", Pattern.CASE_INSENSITIVE);
-	private final static Pattern strictRomanPattern = Pattern.compile("^(?=[MDCLXVI])M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$", Pattern.CASE_INSENSITIVE);
+	private final static Pattern strictRomanPattern = Pattern.compile("^(?=[MDCLXVI])M{0,3}(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$", Pattern.CASE_INSENSITIVE);
 	
 	
 	@Override
