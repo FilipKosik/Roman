@@ -38,6 +38,7 @@
 					resultInput.val(result);
 				},
 				error: function(xhr, ajaxOptions, thrownError){
+					// Note: Status codes can be used for advanced error handling... but this is minimal implementation.
 					const err = !xhr.responseText ? "Server is down!" : xhr.responseText;
 					errMessage.text(err);
 				}
